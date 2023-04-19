@@ -94,6 +94,10 @@ kubectl get all -n data-web-app
 
 # To watch it 
 watch kubectl get all -n data-web-app
+
+#------ Delete deployment and SVC
+kubectl delete deployments data-web-app -n data-web-app
+kubectl delete svc data-web-app-service -n data-web-app
 ```
 
 7. View the deployed web app using port-forwarding
