@@ -183,37 +183,10 @@ rate(container_fs_reads_total{namespace="data-web-app"}[5m])
 
 11. Test the web app and see the metric dashboard 
 ![Dashboard](https://github.com/Mregojos/Monitoring-and-Observability/blob/main/images/Dashboard.png)
-
+![Dashboard Data Web App](https://github.com/Mregojos/Monitoring-and-Observability/blob/main/images/Dashboard%20Web-Data-App.png) 
 12. (Optional) Add notifications
 
 13. Clean-up
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
