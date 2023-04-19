@@ -2,9 +2,9 @@
 
 ## Architecture
 
-## Tech Stack
-
 ## Objective
+
+## Tech Stack
 
 ## Tasks
 
