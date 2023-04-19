@@ -15,10 +15,10 @@
 ## Tasks
 Prerequisites: Docker, Minikube, Kubernetes, (Optional) EC2
 
-1. Web App
+1. Web app
   * Data Analysis Web App: https://github.com/mregojos/CI-CD-with-gitOps
 
-2. Containerize the Web App and test it locally
+2. Containerize the web app and test it locally
 ```sh
 # Data Web App
 cd Application
