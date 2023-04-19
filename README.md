@@ -30,7 +30,7 @@ cd ..
 # docker logout
 docker login 
 # Data Web App
-cd data-web-app
+cd Application
 docker build -t data-web-app .
 docker tag data-web-app mattregojos/data-web-app:latest
 docker push mattregojos/data-web-app:latest
