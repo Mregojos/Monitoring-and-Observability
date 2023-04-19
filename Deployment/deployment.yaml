@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: data-web-app
-        image: mattregojos/data-web-app:latest
+        image: <Docker_Hub_User>/data-web-app:latest
         ports:
         - name: streamlit
           containerPort: 8501
