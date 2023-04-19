@@ -10,7 +10,7 @@
 * Monitor and observe the container
 
 ## Tech Stack
-* AWS, Minikube, Kubernetes, Python, Streamlit, Helm, Prometheus, Grafana
+* EC2, Minikube, Kubernetes, Python, Streamlit, Helm, Prometheus, Grafana
 
 ## Tasks
 Prerequisites: Docker, Minikube, Kubernetes, (Optional) EC2
