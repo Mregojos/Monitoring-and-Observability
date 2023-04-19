@@ -1,1 +1,9 @@
+streamlit
+pandas
+numpy
+matplotlib
+plotly
+openpyxl
+seaborn
+streamlit_option_menu
 
