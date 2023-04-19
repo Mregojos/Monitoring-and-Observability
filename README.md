@@ -94,42 +94,6 @@ kubectl get all -n data-web-app
 
 # To watch it 
 watch kubectl get all -n data-web-app
-
-#------------------(Optional) Two Apps
-# Deployment Folder
-cd deployment
-
-# First app
-# Create a namespace
-kubectl create namespace data-web-app
-# Apply deployment.yaml
-kubectl apply -n data-web-app -f data-web-app-deployment.yaml
-kubectl get deployments -n data-web-app
-kubectl get services -n data-web-app
-
-kubectl get namespaces
-kubectl get pods -n data-web-app
-kubectl get nodes -n data-web-app
-kubectl get all -n data-web-app
-
-# To watch it 
-watch kubectl get all -n data-web-app
-
-# Second app
-# Create a namespace
-kubectl create namespace noteblog-web-app
-# Apply deployment.yaml
-kubectl apply -n noteblog-web-app -f noteblog-web-app-deployment.yaml
-kubectl get deployments -n noteblog-web-app
-kubectl get services -n noteblog-web-app
-
-kubectl get namespaces
-kubectl get pods -n noteblog-web-app
-kubectl get nodes -n noteblog-web-app
-kubectl get all -n noteblog-web-app
-
-# To watch it 
-watch kubectl get all -n noteblog-web-app
 ```
 
 
