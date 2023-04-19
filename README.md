@@ -181,15 +181,12 @@ kube_deployment_status_replicas_available{namespace="data-web-app"}
 rate(container_fs_reads_total{namespace="data-web-app"}[5m])
 ```
 
-11. View the dashboard in Grafana
+11. Test the web app and see the metric dashboard 
+![Dashboard](https://github.com/Mregojos/Monitoring-and-Observability/blob/main/images/Dashboard.png)
 
+12. (Optional) Add notifications
 
-12. test tghe web app and see the metrics 
-
-
-13. (Optional) Add notifications
-
-14. Clean-up
+13. Clean-up
 
 
 
