@@ -1,11 +1,13 @@
 # Container Monitoring and Observability
 
 ## Architecture
+![](https://github.com/Mregojos/Monitoring-and-Observability/blob/main/images/Architecture.png)
+[](https://draw.io)
 
 ## Objective
-* To containerize and deploy a web app
-* To orchestrate the container
-* To monitor and observe the container
+* Containerize and deploy a web app
+* Orchestrate the container
+* Monitor and observe the container
 
 ## Tech Stack
 * AWS, Minikube, Kubernetes, Python, Streamlit, Helm, Prometheus, Grafana
