@@ -1,1 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-web-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: data-web-app
+  template:
+    metadata:
+      labels:
+        app: data-web-app
+    spec:
+      containers:
+      - name: data-web-app
+        image: <Docker Hub User>/data-web-app:latest
+        ports:
+        - name: streamlit
+          containerPort: 8501
 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: data-web-app-service
+spec:
+  selector:
+    app: data-web-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8501
+      nodePort: 30080 # 30000 - 32767 or let kubernetes automatically assign one.
+  type: LoadBalancer
