@@ -100,6 +100,8 @@ kubectl delete deployments data-web-app -n data-web-app
 kubectl delete svc data-web-app-service -n data-web-app
 ```
 
+![](https://github.com/Mregojos/Monitoring-and-Observability/blob/main/images/kubectl%20get%20all%20-n%20data-web-app.png)
+
 7. View the deployed web app using port-forwarding
 ```sh
 # Port Forwarding use the Docker Port, this will work in Cloud9
@@ -132,16 +134,17 @@ helm install grafana grafana/grafana --namespace monitoring
 # Access Grafana Dashboard
 # Username
 admin
-# Expose Grafana to local machine
-kubectl port-forward --namespace monitoring service/grafana 3000:80 --address 0.0.0.0
 # Get the Grafana admin password
 kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
 
 9. View the Grafana Web UI
 ```sh
-
+# Expose Grafana to local machine
+kubectl port-forward --namespace monitoring service/grafana 3000:80 --address 0.0.0.0
 ```
+
+![Grafana](https://github.com/Mregojos/Monitoring-and-Observability/blob/main/images/Grafana.png)
 
 
 
