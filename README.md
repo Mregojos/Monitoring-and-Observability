@@ -79,7 +79,7 @@ sudo mv minikube /usr/local/bin/
 minikube start
 
 # Deployment Folder
-cd deployment
+cd Deployment
 # Create a namespace
 kubectl create namespace data-web-app
 # Apply deployment.yaml
@@ -95,6 +95,25 @@ kubectl get all -n data-web-app
 # To watch it 
 watch kubectl get all -n data-web-app
 ```
+
+7. View the deployed web app using port-forwarding
+```sh
+# Port Forwarding use the Docker Port, this will work in Cloud9
+kubectl port-forward deployment/data-web-app 8501:8501 --address 0.0.0.0 -n data-web-app
+```
+
+8. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
