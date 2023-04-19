@@ -148,6 +148,67 @@ kubectl port-forward --namespace monitoring service/grafana 3000:80 --address 0.
 
 ![Grafana](https://github.com/Mregojos/Monitoring-and-Observability/blob/main/images/Grafana.png)
 
+10. Add a metric dashboard in Grafana
+
+```sh
+
+# In Grafana, add Prometheus data source
+http://prometheus-kube-prometheus-prometheus.monitoring:9090
+
+#---------------For data-web-app
+# CPU usage rate for each container in the data-web-app namespace
+rate(container_cpu_usage_seconds_total{namespace="data-web-app"}[5m])
+
+# Memory usage for each container in the data-web-app namespace (in MB)
+container_memory_usage_bytes{namespace="data-web-app"} / 1024 / 1024
+
+# Memory working set for each container in the data-web-app namespace
+container_memory_working_set_bytes{namespace="data-web-app"}
+
+# Number of running pods in the data-web-app namespace
+count(kube_pod_status_phase{namespace="data-web-app", phase="Running"})
+
+# Total number of succeeded pods in the data-web-app namespace
+count(kube_pod_status_phase{namespace="data-web-app", phase="Succeeded"})
+
+# Total number of unknown pods in the data-web-app namespace
+count(kube_pod_status_phase{namespace="data-web-app", phase="Unknown"})
+
+# Number of available replicas for each deployment in the data-web-app namespace
+kube_deployment_status_replicas_available{namespace="data-web-app"}
+
+# Disk read IOPS (Input/Output Operations PerSecond) for each container in the dta-web-app namespace
+rate(container_fs_reads_total{namespace="data-web-app"}[5m])
+```
+
+11. View the dashboard in Grafana
+
+
+12. test tghe web app and see the metrics 
+
+
+13. (Optional) Add notifications
+
+14. Clean-up
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
